@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 // Bootstrap
-@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
-@import '../../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css';
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../node_modules/bootstrap/scss/bootstrap-utilities';
 
 // Breakpoints
 @import 'utilities/mixins.scss';

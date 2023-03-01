@@ -27,7 +27,7 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
 // URLs para direcionamento de elementos e links internos do site, com o objetivo de diminuir as requisições no banco.
 function wp_dir($value){
-	$dir = array("https://webihost.com.br/horizon", "https://webihost.com.br/horizon/wp-content/themes/horizon");
+	$dir = array("http://horizon.test", "http://horizon.test/wp-content/themes/horizon");
 	return $dir[$value];
 }
 

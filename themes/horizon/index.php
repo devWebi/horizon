@@ -309,13 +309,6 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="testimonials__cta d-flex justify-content-center align-items-center position-relative">
-                <a href="<?php echo wp_dir(0);?>/fale-conosco"
-                    class="testimonials__svg button-white d-inline-flex justify-content-center align-items-center position-absolute">
-                    Deixe sua avaliação
-                    <img src="<?php echo wp_dir(1);?>/assets/images/arrow-button.svg" alt="" class="m-3">
-                </a>
-            </div>
         </div>
     </section>
 	

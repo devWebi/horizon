@@ -12,7 +12,7 @@
 		}elseif (is_single()){single_post_title(); echo ' - ' ; bloginfo('name');
 		}elseif (is_page()){single_post_title(); echo ' - ' ; bloginfo('name');
 		} ?></title>
-		
+
 	<!-- Meta | Open Graph -->
 	<meta property="og:image" content="" />
 	<meta property="og:locale" content="pt_BR" />
@@ -24,14 +24,14 @@
 		} ?>" />
 	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 	<meta property="og:url" content="<?php echo wp_get_canonical_url(); ?>" />
-	
+
 	<!-- Metas | WP-->
 	<?php wp_head(); ?>
-	
+
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo wp_dir(1);?>/assets/images/favicon-32x32.png">
-	
-	<link rel="stylesheet" href="<?php echo wp_dir(1);?>/assets/scss/style.css">
+
     <link rel="stylesheet" href="<?php echo wp_dir(1);?>/assets/css/splide-core.min.css">
+	<link rel="stylesheet" href="<?php echo wp_dir(1);?>/assets/css/style.css">
 </head>
 	<body <?php body_class(); ?>>
 		<header class="header">
@@ -40,21 +40,21 @@
 					<div class="header__small__contact d-flex justify-content-between justify-content-md-end align-items-center  gap-2">
 
 						<div class="header__small__whatsapp d-flex align-items-center">
-							
+
 							<?php
 							$whatsapp = get_theme_mod( 'whatsapp' );
 
 							if ( $whatsapp ){
 								$whatsapp_formatted = preg_replace( '/^([0-9]{2})([0-9]{4,5})([0-9]{4})$/', '($1) $2-$3', $whatsapp );
 							?>
-							
+
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M21.7113 4.48318C20.5876 3.34815 19.2492 2.44822 17.7741 1.83587C16.299 1.22352 14.7167 0.911013 13.1196 0.916577C6.42759 0.916577 0.973509 6.37066 0.973509 13.0626C0.973509 15.2075 1.5373 17.2911 2.59135 19.1295L0.875458 25.4293L7.31005 23.7379C9.08723 24.7062 11.085 25.221 13.1196 25.221C19.8116 25.221 25.2656 19.7669 25.2656 13.0749C25.2656 9.82696 24.0032 6.77512 21.7113 4.48318V4.48318ZM13.1196 23.1619C11.3056 23.1619 9.52846 22.6716 7.9719 21.7524L7.60421 21.5318L3.78022 22.5368L4.7975 18.8109L4.55237 18.4309C3.54458 16.8216 3.00946 14.9615 3.00807 13.0626C3.00807 7.49825 7.54292 2.96339 13.1073 2.96339C15.8037 2.96339 18.3408 4.01744 20.2405 5.92943C21.1812 6.86578 21.9266 7.97951 22.4337 9.20608C22.9407 10.4327 23.1993 11.7477 23.1943 13.0749C23.2188 18.6393 18.684 23.1619 13.1196 23.1619V23.1619ZM18.6595 15.612C18.353 15.4649 16.8578 14.7295 16.5881 14.6192C16.3062 14.5212 16.1101 14.4721 15.9018 14.7663C15.6934 15.0727 15.1174 15.759 14.9458 15.9551C14.7742 16.1635 14.5903 16.188 14.2839 16.0287C13.9775 15.8816 12.997 15.5507 11.8449 14.5212C10.9379 13.7122 10.3374 12.7195 10.1535 12.4131C9.98194 12.1066 10.129 11.9473 10.2884 11.788C10.4232 11.6532 10.5948 11.4325 10.7418 11.261C10.8889 11.0894 10.9502 10.9545 11.0482 10.7584C11.1463 10.5501 11.0973 10.3785 11.0237 10.2314C10.9502 10.0843 10.3374 8.58907 10.0922 7.97625C9.84712 7.38794 9.58974 7.46148 9.40589 7.44922H8.81759C8.60923 7.44922 8.29056 7.52276 8.00867 7.82917C7.73903 8.13558 6.95462 8.87096 6.95462 10.3662C6.95462 11.8615 8.04544 13.3078 8.19251 13.5039C8.33959 13.7122 10.3374 16.7763 13.377 18.0878C14.1001 18.4064 14.6639 18.5903 15.1051 18.7251C15.8282 18.958 16.4901 18.9212 17.0171 18.8477C17.6054 18.7619 18.8188 18.1123 19.0639 17.4014C19.3213 16.6905 19.3213 16.09 19.2355 15.9551C19.1497 15.8203 18.9659 15.759 18.6595 15.612V15.612Z"
 									fill="white" />
 							</svg>
-							
-							
+
+
 							<a href="https://api.whatsapp.com/send?phone=<?php echo $whatsapp; ?>&text=<?php echo urlencode( 'Olá, vim pelo site e gostaria de mais informações' ); ?>" target="_blank" class="header__small__whatsapp__number"><?php echo $whatsapp_formatted;?></a>
 							<?php } ?>
 						</div>
