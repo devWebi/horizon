@@ -1,0 +1,11 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+#Options +FollowSymLinks
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#pagina
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/(.*)$ thumb.php?w=$1&h=$2&t=$3&ano=$4&mes=$5&img=$6

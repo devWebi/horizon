@@ -1,0 +1,36 @@
+// Fonte
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+// Bootstrap
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css';
+
+// Breakpoints
+@import 'utilities/mixins.scss';
+
+// Variação de cores
+@import 'utilities/variables.scss';
+
+//Reset
+@import 'base/reset.scss';
+
+// Layout do cabeçalho
+@import 'layout/header.scss';
+
+// Layout do rodapé
+@import 'layout/footer.scss';
+
+// Pagina de contatos
+@import 'pages/contatos-page.scss';
+
+// Pagina home
+@import 'pages/front-page.scss';
+
+// Pagina de construcao
+@import 'pages/construcao-page.scss';
+
+// Pagina dos modelos
+@import 'pages/modelos-page.scss';
+
+// Estilos de botoes
+@import 'utilities/button.scss';

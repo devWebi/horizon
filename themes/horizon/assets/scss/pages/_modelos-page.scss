@@ -1,0 +1,287 @@
+.models {
+    z-index: 9999;
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__title {
+		position: relative;
+        font-size: 40px;
+        padding: 50px 0;
+
+        @include mobile {
+            font-size: 30px;
+        }
+
+		&::after {
+			content: 'FLOTAOEPT';
+			position: absolute;
+			z-index: -1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 130px;
+			font-weight: bold;
+			opacity: .05;
+
+			@include desktop-md {
+				font-size: 80px;
+			}
+
+			@include mobile {
+				font-size: 50px;
+			}
+		}
+    }
+
+    &__carousel {
+
+        .splide {
+
+            &__arrows {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                top: 50%;
+				transform: translateY(-50%);
+                padding: 0 100px;
+				pointer-events: none;
+
+                @include mobile {
+                    padding: 0 10px;
+                }
+            }
+
+            &__arrow {
+                width: 70px;
+                height: 70px;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                background: rgb(0, 0, 0, 0.2);
+                cursor: pointer;
+				pointer-events: all;
+                transition: all .3s;
+
+                &:hover {
+                    background: #000;
+                }
+
+                path {
+                    fill: #fff;
+                }
+
+                &--next {
+                    transform: rotate(180deg);
+                }
+
+				@include mobile {
+					width: 40px;
+					height: 40px;
+					border-width: 1px;
+				}
+            }
+        }
+    }
+}
+
+// --------- FOTOS PEQUENAS -------------
+
+.thumbnails {
+	$thumbnails: &;
+
+    position: relative;
+	margin-top: 10px;
+
+    .splide {
+		&__slide {
+			&.is-active {
+				#{ $thumbnails }__item {
+					&::after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+    }
+
+	&__item {
+		position: relative;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('../images/olho-slide.webp'), rgba(0, 0, 0, .6);
+			background-repeat: no-repeat;
+			background-position: center;
+			opacity: 0;
+			z-index: 1;
+			transition: opacity .3s;
+
+			@include mobile {
+				background-size: 30px;
+			}
+		}
+	}
+
+	&__img {
+        width: 100%;
+		height: 200px;
+        object-fit: cover;
+        object-position: center;
+
+		@include desktop-lg {
+			height: 150px;
+		}
+
+		@include tablet {
+			height: 100px;
+		}
+
+		@include mobile {
+			height: 75px;
+		}
+	}
+}
+
+// --------- FOTOS PEQUENAS -------------
+
+.features {
+    margin: 50px 0;
+
+	&__tabs {
+		&__header {
+			&__item {
+				position: relative;
+				color: #828282;
+				font-weight: 400;
+				border: 1px solid #828282;
+				border-radius: 3px;
+				margin: 0 2px;
+				padding: 12px 30px;
+				cursor: pointer;
+				transition: all .3s;
+
+				@include mobile {
+					padding: 12px 7px;
+					font-size: 12px;
+				}
+
+				&--active {
+					color: #fff;
+					font-weight: 700;
+					background: #828282;
+					padding: 12px 30px;
+					border-radius: 3px;
+
+					@include mobile {
+						padding: 12px 7px;
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						right: 10px;
+						bottom: -5px;
+						border-radius: 3px;
+						width: 13px;
+						height: 13px;
+						background: #828282;
+						transform: rotate(45deg);
+
+					}
+				}
+
+				&:not(&--active):hover {
+					background: scale-color(#828282, $lightness: 90%);
+				}
+			}
+		}
+
+		&__content {
+			&__item {
+				display: none;
+				color: #404040;
+				font-size: 18px;
+				line-height: 30px;
+				padding: 30px 0;
+
+				&--active {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.version {
+
+    &__title {
+        padding: 50px 0 30px 0;
+        background: #f2f2f2;
+
+    }
+
+    &__model {
+
+        &__card {
+            width: 50%;
+            height: 500px;
+
+            @include desktop-sm {
+                height: 400px;
+            }
+
+            &__img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                height: 100%;
+                top: 0;
+                z-index: -1;
+            }
+        }
+
+        &__title {
+            color: #fff;
+            font-size: 28px;
+            padding: 30px;
+            width: 200px;
+
+            @include desktop-md {
+                font-size: 18px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        &__vertical {
+            color: #fff;
+            transform: rotate(180deg);
+            letter-spacing: 0.81em;
+            width: 100%;
+            right: 40px;
+            bottom: 40px;
+            z-index: 9;
+            text-orientation: mixed;
+            writing-mode: vertical-lr;
+
+            @include desktop-sm {
+                font-size: 11px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    }
+}

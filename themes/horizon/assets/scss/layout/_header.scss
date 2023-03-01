@@ -1,0 +1,176 @@
+// ---------- MENU PEQUENO ---------------
+.header {
+    position: relative;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+
+    &__small {
+		display: flex;
+		align-items: center;
+        background: #0037CA;
+        height: 50px;
+		overflow: hidden;
+		transition: all .3s;
+
+		&--hidden {
+			height: 0;
+		}
+
+		&__whatsapp {
+			gap: 10px;
+
+			&__number {
+				color: #fff;
+				font-size: 18px;
+				margin-right: 45px;
+
+				@include mobile {
+					display: none;
+				}
+			}
+		}
+
+		&__socials {
+			gap: 10px;
+
+			&__item {
+				border: 2px solid #fff;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+
+				&:hover {
+					background: #fff;
+					path {
+						fill: #0037CA;
+					}
+				}
+			}
+		}
+    }
+
+// ---------- MENU PRINCIPAL ---------------
+
+    &__menu {
+        height: 100px;
+        background: rgb(0, 0, 0);
+        mix-blend-mode: saturation;
+
+        &__logo {
+
+            @include mobile {
+                width: 120px;
+                height: auto;
+            }
+        }
+
+        &__link {
+            color: #fff;
+            font-family: 18px;
+            font-weight: 700;
+            padding: 15px;
+            border-bottom: 2px solid transparent;
+            transition: all .3s;
+
+            &:hover {
+                color: #0037CA;
+                border-bottom: 2px solid #0037CA;
+            }
+
+            &--cta {
+                text-align: center;
+                background: #0037CA;
+                margin-left: 15px;
+                padding: 12px 30px;
+                border-radius: 50px;
+
+                &:hover {
+                    background: #fff;
+                    border-bottom: 2px solid transparent;
+                }
+
+                @include mobile {
+                    font-size: 11px;
+                    padding: 8px 20px;
+                }
+            }
+        }
+    }
+
+    &__mobile {
+
+        &__sandwich {
+            margin-left: 30px;
+
+            &__bar {
+                background: #fff;
+                height: 6px;
+                width: 40px;
+                border-radius: 10px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.mobile-menu {
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	transform: translateX(100%);
+	gap: 30px;
+	background: scale-color($blue-primary, $lightness: -30%);
+	z-index: 999999;
+	opacity: 0;
+	transition: all .3s ease;
+
+	&--visible {
+		opacity: 1;
+		transform: none;
+	}
+
+	&__close {
+		top: 20px;
+		right: 20px;
+	}
+
+	&__header {
+		height: 10%;
+	}
+
+	&__list {
+		height: 80%;
+		overflow-y: auto;
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&__link {
+				color: #fff;
+				font-size: 18px;
+				margin: 5px;
+				padding: 10px 20px;
+				border-bottom: 3px solid transparent;
+			
+				&:hover {
+					border-bottom: 3px solid #fff;
+					// border-bottom: transtionX(100px);
+					transition: all .2s ease;
+				}
+			}
+		}
+		
+	}
+
+	&__footer {
+		height: 10%;
+	}
+	
+	&__svg {
+		cursor: pointer;
+		margin: 0 30px;
+	}
+}

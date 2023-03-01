@@ -1,0 +1,742 @@
+// ----------- SLIDE PRINCIPAL -------------
+
+.hero {
+
+	&__about {
+		padding: 0 0 100px 0;
+		min-height: 90vh;
+
+		@include mobile {
+			min-height: 85vh;
+		}
+
+		&__cta {
+			width: fit-content;
+			padding: 8px 40px;
+			margin-top: 20px;
+			color: #404040;
+			background: $blue-primary;
+			font-weight: bold;
+			border-radius: 30px;
+			transition: all .3s;
+
+			&:hover {
+				background: scale-color($blue-primary, $lightness: -20%);
+			}
+		}
+	}
+
+    &__title {
+        z-index: 9999;
+        width: 100%;
+        color: #fff;
+        font-size: 40px;
+		
+		@include mobile {
+			font-size: 36px;
+			margin-left: 20px;
+			margin-bottom: 10px;
+		}
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 60px;
+            background: red;
+            left: -20px;
+        }
+    }
+
+    &__description {
+        -index: 9999;
+        width: 100%;
+        bottom: 40px;
+        left: 350px;
+        color: #fff;
+        font-size: 18px;
+
+		@include mobile {
+			font-size: 16px;
+		}
+    }
+
+	&__overlay {
+		background: rgba(0, 0, 0, 0.25);
+		z-index: -1;
+	}
+
+    &__image {
+        object-fit: cover;
+        object-position: center;
+        z-index: -2;
+    }
+
+    .splide {
+
+        &__arrows {
+            top: 50%;
+            width: 100%;
+            z-index: 9999;
+            padding: 0 150px;
+			pointer-events: none;
+
+            @include desktop-md {
+                padding: 0 50px;
+
+            }
+
+            @include mobile {
+                padding: 0 20px;
+            }
+
+        }
+
+        &__arrow {
+            background: none;
+            border: 3px solid #fff;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            cursor: pointer;
+			pointer-events: all;
+            transition: all .3s;
+
+            &:hover {
+                background: rgb(0, 0, 0);
+
+            }
+
+            &--next {
+                transform: rotate(180deg);
+            }
+
+			@include mobile {
+				width: 45px;
+				height: 45px;
+
+				svg {
+					width: 13px;
+					height: 24px;
+				}
+			}
+        }
+
+    }
+}
+
+// ---------- NUMEROS DA EMPRESA --------------
+
+.company {
+    background: linear-gradient(180deg, rgba(0, 55, 202, 0.9) 0%, rgba(0, 43, 159, 0.9) 100%);
+
+	&__column {
+		position: relative;
+		width: 25%;
+		padding: 0 35px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			height: 61px;
+			width: .8px;
+			background: #F2F2F2;
+		}
+
+		&:last-child {
+			&::after {
+				content: none;
+			}
+		}
+
+        @include desktop-sm {
+			width: 50%;
+
+			&::after {
+				top: 100%;
+				right: 50%;
+				width: 61px;
+				height: .8px;
+				transform: translateX(50%);
+			}
+        }
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+    &__number {
+		position: relative;
+        margin: 20px 0;
+		gap: 10px;
+
+        &__main {
+            font-size: 60px;
+
+			@include desktop-md {
+				font-size: 48px;
+			}
+        }
+
+        &__description {
+            width: 150px;
+            font-weight: 700;
+            line-height: 20px;
+
+			// @include
+        }
+    }
+}
+
+// ----------- HISTORIA DE CONSTRUÇÃO -------------
+
+.history {
+
+    &::before {
+        content: "BO";
+        font-size: 400px;
+        font-weight: bold;
+        color: #000000;
+        opacity: 0.05;
+        position: absolute;
+        top: -120px;
+        right: 0;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "ATS";
+        font-size: 400px;
+        font-weight: bold;
+        color: #000000;
+        opacity: 0.05;
+        position: absolute;
+        bottom: -100px;
+        z-index: -1;
+
+        @include desktop-sm {
+            right: 0;
+        }
+    }
+
+    &__left {
+
+        &__title {
+            padding: 20px 0;
+			font-size: 26px;
+        }
+
+        &__description {
+            line-height: 30px;
+            // width: 600px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 95px;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                background: linear-gradient(180deg, rgba(251, 246, 238, 0) 0%, #ffffff 100%);
+            }
+        }
+
+        &__cta {
+            margin: 30px 0;
+            transition: all .3s;
+
+            &:hover {
+                background: #0045FF;
+                color: #fff;
+
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &__right {
+
+        &__title {
+            width: 130px;
+            padding: 10px 20px;
+            bottom: 30px;
+            color: #fff;
+            background: #0037CA;
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    &__carousel {
+        position: relative;
+
+        .splide {
+
+            &__arrows {
+                position: absolute;
+                z-index: 9999;
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+                top: 50%;
+                width: 100%;
+                padding: 0 50px;
+            }
+
+            &__arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 3px solid #fff;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                padding: 10px;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    background: rgb(0, 0, 0);
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+
+                &--prev {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    // ---------- ETAPAS DA CONSTRUÇÃO --------------
+
+	&__column {
+		width: 25%;
+
+		@include desktop-sm {
+			width: 50%;
+		}
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+    &__stage {
+		$history__stage: &;
+
+        padding: 50px 0;
+		opacity: .2;
+		transition: all .3s;
+
+		&:not(&--active):hover {
+			opacity: .5;
+		}
+
+		&--active {
+			opacity: 1;
+
+			#{ $history__stage }__icon {
+				&__open {
+					display: block;
+				}
+
+				&__closed {
+					display: none;
+				}
+			}
+		}
+
+        &__card {
+            width: 100%;
+        }
+
+        &__line {
+            background: #0045FF;
+            width: 100%;
+            height: 3px;
+            position: relative;
+            bottom: -30px;
+            z-index: -1;
+
+			@include desktop-sm {
+				display: none;
+			}
+        }
+
+        &__icon {
+            color: #fff;
+            font-size: 32px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #0045FF;
+            cursor: pointer;
+
+			&__open {
+				display: none;
+			}
+
+			&__closed {
+				display: block;
+			}
+        }
+
+        &__title {
+            color: #404040;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        &__description {
+            width: 220px;
+            line-height: 20px;
+        }
+    }
+}
+
+// ---------- MODELO DOS BARCOS -----------
+
+.boats {
+
+    &__title {
+        padding: 50px 0;
+        background: #f2f2f2;
+    }
+
+    &__model {
+
+        &__card {
+			$card: &;
+
+			flex: 1;
+            height: 500px;
+
+			@include mobile {
+				flex: 1 0 100%;
+			}
+
+			&__overlay {
+				height: 100%;
+				background: rgba(0, 0, 0, .5);
+				z-index: -1;
+				transition: all .3s;
+			}
+
+            @include desktop-sm {
+                height: 400px;
+            }
+
+            &__img {
+                top: 0;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                height: 100%;
+                z-index: -2;
+            }
+
+			&__title {
+				display: block;
+				top: 0;
+				left: 0;
+				padding: 30px;
+				color: #fff;
+				font-size: 28px;
+				transition: all .5s;
+
+				@include desktop-md {
+					font-size: 18px;
+				}
+
+				@include mobile {
+					font-size: 14px;
+				}
+			}
+
+			&__button {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, 30px);
+				width: 100px;
+				height: 100px;
+				font-size: 85px;
+				background: $blue-primary;
+				color: #FFF;
+				border-radius: 50px;
+				opacity: 0;
+				transition: all .5s;
+			}
+
+			&__vertical {
+				color: #fff;
+				transform: rotate(180deg);
+				letter-spacing: 0.81em;
+				width: 100%;
+				right: 40px;
+				bottom: 40px;
+				z-index: 9;
+				text-orientation: mixed;
+				writing-mode: vertical-lr;
+				transition: all .3s;
+
+				@include desktop-sm {
+					font-size: 11px;
+					bottom: 20px;
+					right: 20px;
+				}
+			}
+
+			&:hover {
+				#{ $card }__overlay {
+					background: rgba(255, 255, 255, .5);
+				}
+
+				#{ $card }__title {
+					color: #000;
+					top: calc(50% - 30px);
+					left: 50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
+				}
+
+				#{ $card }__button {
+					opacity: 1;
+				}
+
+				#{ $card }__vertical {
+					opacity: 0;
+				}
+			}
+        }
+
+    }
+}
+
+// --------- SERVIÇOS --------------
+
+.services {
+    padding: 60px 0;
+    background: radial-gradient(75.46% 256.13% at 60.16% 69.63%, #D0D0D0 0%, rgba(213, 213, 213, 0.859205) 28.2%, rgba(244, 244, 244, 0) 100%);
+
+    &__title {
+        font-size: 30px;
+        line-height: 35px;
+        padding: 20px 0;
+    }
+
+    &__card {
+        width: 100%;
+        border-radius: 15px;
+
+        &--gray {
+            margin-top: 50px;
+
+            @include mobile {
+                margin-top: 0;
+            }
+        }
+
+        @include desktop-md {
+            margin-bottom: 20px;
+        }
+
+        &__items {
+            z-index: 1;
+            padding: 70px 20px;
+        }
+
+        &__bg {
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
+        }
+
+        &__title {
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        &__description {
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        &__cta {
+            background: #fff;
+            border-radius: 30px;
+            padding: 2px 35px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #0045FF;
+            margin: 20px 0;
+            transition: all .3s;
+
+            &:hover {
+                color: #fff;
+                background: #000000;
+                box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+
+                path {
+                    fill: #fff;
+                }
+            }
+
+            &--black {
+                color: #fff;
+                background-color: #000;
+
+                &:hover {
+                    background: #0037CA;
+                    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.25);
+                }
+
+                path {
+                    fill: #fff;
+                }
+
+            }
+
+        }
+    }
+}
+
+// --------- DEPOIMENTOS ------------
+
+.testimonials {
+    padding: 50px 0 100px 0;
+
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__effect {
+        top: 150px;
+        height: 100%;
+        mix-blend-mode: saturation;
+    }
+
+    &__cta {
+        margin-top: 150px;
+    }
+
+    &__svg {
+        padding: 20px 50px;
+        transition: all .3s;
+
+        &:hover {
+            background: #000000;
+        }
+    }
+
+    .custom-shape-divider-bottom-1674160652 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1674160652 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 422px;
+        transform: rotateY(180deg);
+    }
+
+    .custom-shape-divider-bottom-1674160652 .shape-fill {
+        fill: #0037CA;
+    }
+
+    &__title {
+        padding: 50px 0 25px 0;
+    }
+
+    .splide {
+
+        &__arrow {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            border: 3px solid #fff;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            bottom: -60px;
+            right: 0;
+            z-index: 9999;
+            cursor: pointer;
+            background: #0037CA;
+
+            &--prev {
+                transform: rotate(180deg);
+                right: 70px;
+            }
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__card {
+        background: #fff;
+        width: 500px;
+        height: auto;
+        margin: 20px 10px;
+        border-radius: 8px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+
+        &__icon {
+            left: 20px;
+            top: 20px;
+
+            &--variable {
+                transform: rotate(180deg);
+                left: calc(100% - 80px);
+                top: calc(100% - 60px);
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        &__profile {
+            padding: 20px 0 0 100px;
+        }
+
+        &__description {
+            padding: 20px 30px 50px 30px;
+        }
+    }
+}

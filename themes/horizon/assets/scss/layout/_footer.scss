@@ -1,0 +1,105 @@
+.footer {
+    background: #1A1A1A;
+    padding: 50px 0 0;
+
+    &__description {
+        color: #fff;
+        font-size: 12px;
+        padding: 20px 150px 30px 0;
+
+		@include mobile {
+			padding: 20px 0 30px 0;
+		}
+    }
+
+    &__items {
+        padding-bottom: 30px 0;
+
+        @include desktop-sm {
+            margin-bottom: 20px;
+        }
+
+		&__social {
+			gap: 15px;
+		}
+
+        &__icons {
+
+            &__icon {
+                border: 2px solid #fff;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                &:hover {
+                    background: #fff;
+
+                    path {
+                        fill: #1A1A1A;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            color: #fff;
+            font-size: 18px;
+            padding-bottom: 30px;
+            font-weight: bold;
+
+			@include mobile {
+				padding-bottom: 15px;
+			}
+        }
+
+        &__link {
+            color: #fff;
+            padding: 8px 0;
+            margin: 5px 0;
+            font-style: normal;
+
+            &:hover {
+                color: #6e6e6e;
+            }
+
+			&__icon {
+				flex: 0 0 26px;
+				@include mobile {
+					flex: 0 0 100%;
+				}
+			}
+
+        }
+    }
+
+    &__copyright {
+        background: #fff;
+        padding: 15px 0;
+        margin-top: 40px;
+
+        @include desktop-sm {
+            margin-top: 20px;
+        }
+
+        &__copy {
+
+            @include desktop-sm {
+                flex-direction: column;
+            }
+
+            @include mobile {
+                font-size: 12px;
+				gap: 2px;
+            }
+        }
+
+        &__link {
+            color: #404040;
+            font-weight: bold;
+
+            &:hover {
+                color: #0037CA;
+            }
+        }
+    }
+}

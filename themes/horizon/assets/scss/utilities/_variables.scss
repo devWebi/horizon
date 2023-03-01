@@ -1,0 +1,22 @@
+$blue-primary: #0037CA;
+$blue-secondary: #0045FF;
+$black-horizon: #000;
+$white-horizon: #fff;
+$gray-horizon: #404040;
+
+.caption-headline {
+    color: #0037CA;
+    font-size: 20px;
+    letter-spacing: 0.87em;
+    text-transform: uppercase;
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+.main-title {
+    color: #404040;
+    font-size: 35px;
+    text-transform:uppercase;
+}
