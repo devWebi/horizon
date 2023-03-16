@@ -74,11 +74,16 @@
 
     &__form {
         width: 100%;
-        
     }
 
+	.wpcf7-form-control-wrap {
+		display: block;
+		margin-bottom: 20px;
+	}
+
     &__input {
-        margin: 10px;
+		display: block;
+		width: 100%;
         padding: 15px 20px;
         background: #EAEAEA;
         outline: none;
@@ -93,7 +98,7 @@
         border: none;
         width: 120px;
         height: 50px;
-        margin: 0 0 40px 10px;
+		margin-bottom: 20px;
         cursor: pointer;
         transition: all .3s;
 

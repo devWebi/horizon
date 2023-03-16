@@ -1,0 +1,40 @@
+.wpcf7-form {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(255, 255, 255, .8);
+		z-index: 1;
+		pointer-events: none;
+		opacity: 0;
+		transition: all .3s;
+	}
+
+	&.submitting {
+		&::after {
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+}
+
+.wpcf7-not-valid-tip {
+	padding: 10px;
+	color: #FF4858;
+	background: #FFE0E3;
+	border: none;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+	padding: 10px;
+	color: #CE8501;
+	background: #FFDB9B;
+	border: none;
+	margin: 0 0 20px;
+}
+
+.wpcf7-spinner {
+	display: none;
+}

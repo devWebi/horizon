@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('DOMContentLoaded', function () {
 
 	const setupSandwichMenu = () => {
 		const sandwich = document.querySelector('.header__mobile__sandwich');
@@ -26,6 +26,25 @@ window.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	const setupPhoneMasks = () => {
+		const telInputs = document.querySelectorAll('input[type="tel"]');
+		const masks = ['(99) 9999-9999', '(99) 99999-9999'];
+		const inputHandler = (masks, max, e) => {
+			const t = e.target;
+			const v = t.value.replace(/\D/g, '');
+			const m = t.value.length > max ? 1 : 0;
+			VMasker(t).unMask();
+			VMasker(t).maskPattern[masks[m]];
+			t.value = VMasker.toPattern(v, masks[m]);
+		}
+
+		telInputs && telInputs.forEach(telInput => {
+			console.log(telInputs);
+			telInput.addEventListener('input', inputHandler.bind(undefined, masks, 14), false);
+		});
+	}
+
 	setupHeaderEvents();
 	setupSandwichMenu();
+	setupPhoneMasks();
 });

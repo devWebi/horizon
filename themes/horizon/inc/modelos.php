@@ -29,7 +29,7 @@ function create_modelos()
 			'exclude_from_search'   => true,
 			'supports'    		 => array( 'title', 'editor', 'thumbnail'),
 			'rewrite'			=>	array(
-				'slug'			=>	'modelo',
+				'slug'			=>	'modelos',
 				'with_front'	=>	false
 			),
 			'menu_position'		 => 9,

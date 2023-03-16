@@ -7,13 +7,11 @@
 	$largura = $_GET['w'];
 	$altura = $_GET['h'];
 	$tipo = $_GET['t'];
-	$preenchimento = '#fbf6ee';
 
 	//$oImg = new canvas();
 	$oImg = canvas::Instance();
 	$oImg->carregaUrl($arquivo);
 
-	$oImg->hexa($preenchimento);
 	$oImg->redimensiona($largura, $altura, $tipo);
 	$oImg->grava();
 //	exit;

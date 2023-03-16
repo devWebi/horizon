@@ -13,7 +13,7 @@ get_header();
 	?>
 
     <section class="models position-relative">
-        <h2 class="models__title text-center"><?php echo $linha->dados->post_title;?></h2>
+        <h2 class="models__title text-center" data-title="<?php echo $linha->dados->post_title; ?>"><?php echo $linha->dados->post_title;?></h2>
         <div class="splide models__carousel position-relative">
             <div class="splide__arrows splide__arrows--ltr">
                 <button class="splide__arrow splide__arrow--prev d-inline-flex justify-content-center align-items-center" type="button" aria-label="Previous slide"     aria-controls="splide01-track">
@@ -119,8 +119,7 @@ get_header();
         </div>
     </section>
 
-    <script src="<?php echo wp_dir(1);?>/assets/js/vendor.min.js"></script>
-    <script src="<?php echo wp_dir(1);?>/assets/js/script.js"></script>
+
     <script>
         const modelsCarousel = new Splide(document.querySelector('.models__carousel'), {
 			pagination: false,

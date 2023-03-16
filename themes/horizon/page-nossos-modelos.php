@@ -114,8 +114,6 @@ get_header();
         </div>
     </section>
 
-    <script src="<?php echo wp_dir(1);?>/assets/js/vendor.min.js"></script>
-    <script src="<?php echo wp_dir(1);?>/assets/js/script.js"></script>
     <script>
         const modelsCarousel = new Splide(document.querySelector('.models__carousel'), {
 			pagination: false,

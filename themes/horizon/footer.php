@@ -6,8 +6,13 @@
                         <img src="<?php echo wp_dir(1);?>/assets/images/logo.webp" alt="" class="footer__logo d-block mx-auto mx-sm-0">
                         <p class="footer__description text-center text-sm-start"><?php echo get_theme_mod( 'previa_logo' ); ?></p>
                         <div class="footer__items__social d-flex justify-content-center justify-content-sm-start">
+							<?php
+							$facebook = get_theme_mod( 'facebook' );
+
+							if ( $facebook ):
+							?>
                             <div class="footer__items__icons">
-                                <a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
+                                <a href="<?php echo $facebook; ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
                                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -16,8 +21,17 @@
                                     </svg>
                                 </a>
                             </div>
+							<?php
+							endif;
+							?>
+
+							<?php
+							$instagram = get_theme_mod( 'instagram' );
+
+							if ( $instagram ):
+							?>
                             <div class="footer__items__icons">
-                                <a href="<?php echo get_theme_mod( 'instagram' ); ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
+                                <a href="<?php echo $instagram; ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
                                     <svg width="14" height="14" viewBox="0 0 19 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -26,8 +40,17 @@
                                     </svg>
                                 </a>
                             </div>
+							<?php
+							endif;
+							?>
+
+							<?php
+							$linkedin = get_theme_mod( 'linkedin' );
+
+							if ( $linkedin ):
+							?>
                             <div class="footer__items__icons">
-                                <a href="<?php echo get_theme_mod( 'linkedin' ); ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
+                                <a href="<?php echo $linkedin; ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
                                     <svg width="14" height="14" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -39,8 +62,17 @@
                                     </svg>
                                 </a>
                             </div>
+							<?php
+							endif;
+							?>
+
+							<?php
+							$youtube = get_theme_mod( 'youtube' );
+
+							if ( $youtube ):
+							?>
                             <div class="footer__items__icons">
-                                <a href="<?php echo get_theme_mod( 'youtube' ); ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
+                                <a href="<?php echo $youtube; ?>" class="footer__items__icons__icon d-flex justify-content-center align-items-center">
                                     <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -49,6 +81,9 @@
                                     </svg>
                                 </a>
                             </div>
+							<?php
+							endif;
+							?>
                         </div>
                     </div>
                 </div>
@@ -58,7 +93,7 @@
                         <a href="<?php echo wp_dir(0);?>/quem-somos" class="footer__items__link">Quem Somos</a>
                         <a href="<?php echo wp_dir(0);?>/nossos-modelos" class="footer__items__link">Nossos Modelos</a>
                         <a href="<?php echo wp_dir(0);?>/historico-de-construcao" class="footer__items__link">Histórico de Construção</a>
-                        <a href="" class="footer__items__link">Política de Privacidade</a>
+                        <a href="<?php echo wp_dir(0); ?>/politica-de-privacidade" class="footer__items__link">Política de Privacidade</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-sm-6">
@@ -85,9 +120,9 @@
 						
 						<?php
 						$email = get_theme_mod( 'email' );
-						if ( $email ){
+						if ( $email ):
 						?>
-                        <a href="" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center  gap-2">
+                        <a href="mailto:<?php echo $email; ?>" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center  gap-2">
                             <svg width="26" height="20" class="footer__items__link__icon" viewBox="0 0 26 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -96,16 +131,18 @@
                             </svg>
                             <?php echo $email;?>
                         </a>
-						<?php } ?>
+						<?php
+						endif;
+						?>
                         <address>
-                            <a href="" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center  gap-2">
+                            <a href="https://goo.gl/maps/jCgJyrfsqBU42ksi6" target="_blank" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center  gap-2">
                                 <svg width="22" height="26" class="footer__items__link__icon" viewBox="0 0 22 26" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M10.8401 12.7671C11.5423 12.7671 12.1437 12.5169 12.6441 12.0164C13.1437 11.5168 13.3936 10.9159 13.3936 10.2137C13.3936 9.51148 13.1437 8.91015 12.6441 8.40968C12.1437 7.91007 11.5423 7.66026 10.8401 7.66026C10.138 7.66026 9.53705 7.91007 9.03743 8.40968C8.53696 8.91015 8.28672 9.51148 8.28672 10.2137C8.28672 10.9159 8.53696 11.5168 9.03743 12.0164C9.53705 12.5169 10.138 12.7671 10.8401 12.7671ZM10.8401 22.1509C13.4361 19.7677 15.3618 17.6024 16.6173 15.655C17.8727 13.7085 18.5004 11.9798 18.5004 10.469C18.5004 8.14966 17.7608 6.25034 16.2815 4.77106C14.803 3.29263 12.9893 2.55342 10.8401 2.55342C8.69101 2.55342 6.87681 3.29263 5.39753 4.77106C3.9191 6.25034 3.17988 8.14966 3.17988 10.469C3.17988 11.9798 3.8076 13.7085 5.06303 15.655C6.31846 17.6024 8.24416 19.7677 10.8401 22.1509ZM10.8401 25.5342C7.4143 22.619 4.85578 19.9111 3.16456 17.4105C1.4725 14.9107 0.626465 12.5969 0.626465 10.469C0.626465 7.27724 1.65336 4.73446 3.70716 2.84068C5.76011 0.946893 8.13777 0 10.8401 0C13.5425 0 15.9202 0.946893 17.9731 2.84068C20.0269 4.73446 21.0538 7.27724 21.0538 10.469C21.0538 12.5969 20.2082 14.9107 18.517 17.4105C16.8249 19.9111 14.266 22.619 10.8401 25.5342Z"
                                         fill="#F2F2F2" />
                                 </svg>
-                                Endereço
+                                Rua Delegado Waldir Guilherme nº 350, Ilha da Conceição, Niterói, Rio de Janeiro, Brasil.
                             </a>
                         </address>
                     </div>
@@ -115,7 +152,7 @@
         <div class="footer__copyright">
             <div class="container">
                 <div class="footer__copyright__copy d-flex justify-content-between align-items-center">
-                    <p class="footer__copyright__item">Copyright © 2023 - Todos os Direitos Reservados</p>
+                    <p class="footer__copyright__item">Copyright &copy; <?php echo date( 'Y' ); ?> - Todos os Direitos Reservados</p>
                     <p class="footer__copyright__item">Desenvolvido e otimizado por <a href=""
                             class="footer__copyright__link">Agência WEBi</a></p>
                 </div>

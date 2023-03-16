@@ -43,7 +43,7 @@ function wp_dir($value){
 }
 
 // oculta o administrador do wp-admin da URL e redireciona
-function disableAuthorUrl(){
+function disableAuthorUrl() {
     if (is_author()) {
        wp_redirect(home_url());
        exit();
@@ -54,6 +54,18 @@ add_action('template_redirect', 'disableAuthorUrl');
 // Remove a versão do WordPress do cabeçalho
 remove_action('wp_head', 'wp_generator');
 
+function wi_after_setup_theme() {
+	if ( class_exists( 'ACF' ) ) {
+		acf_add_options_page( array(
+			'page_title'	=>	'Configurações do Tema',
+			'icon_url'		=>	'dashicons-layout',
+			'position'		=>	50
+		) );
+	}
+}
+
+add_action( 'after_setup_theme', 'wi_after_setup_theme' );
+
 // Remove atualizacao dos plugins
 //add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
 remove_action('load-update-core.php','wp_update_plugins');
@@ -62,7 +74,7 @@ add_filter('pre_site_transient_update_plugins','__return_null');
 // Substitui o copy right do wordpress para outro
 function wpmidia_change_footer_admin () {
     echo "Desenvolvido por <a href='https://webi.com.br' target='_blank'>Webi</a>";
-} 
+}
 add_filter('admin_footer_text', 'wpmidia_change_footer_admin');
 
 // Habilitar Thumbnail
@@ -75,35 +87,6 @@ function wpmidia_remove_screen_options(){
     return false;
 }
 add_filter('screen_options_show_screen', 'wpmidia_remove_screen_options');
-
-// Remove os menus desejados
-function removeMenu() {
-	global $menu, $submenu;
-
-	//unset($menu[65]); // Plugins
-	unset($submenu['index.php'][10]); // Painel -> Atualização
-}
-add_action('admin_head', 'removeMenu');
-
-// Remove opcoes de menus desnecessarias
-function remove_menus(){
-	//remove_menu_page( 'index.php' ); //Dashboard 
-	remove_menu_page( 'edit.php' ); //Posts - publicações
-	//remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );
-	//remove_menu_page( 'upload.php' ); //Media - imagens, vídeos, docs, etc...
-	//remove_menu_page( 'edit.php?post_type=page' ); //Pages - páginas
-	remove_menu_page( 'edit-comments.php' ); //Comments - comentários
-	//remove_menu_page( 'themes.php' ); //Appearance - aparência (recomendo!)
-	remove_menu_page( 'plugins.php' ); //Plugins (recomendo!)
-	//remove_menu_page( 'users.php' ); //Users - usuários 
-	remove_menu_page( 'tools.php' ); //Tools - ferramentas (recomendo!)
-	//remove_menu_page( 'options-general.php' ); //Settings - configurações
-	//remove_menu_page('edit.php?post_type=acf');
-}
-
-add_action( 'admin_init', 'remove_menus');
-add_filter('acf/settings/show_admin', '__return_false');
-
 
 // Consulta dos modulos
 
@@ -155,6 +138,8 @@ function my_attachments( $attachments )
   $attachments->register( 'my_attachments', $args ); // unique instance name
 }
 
+add_action( 'attachments_register', 'my_attachments' );
+
 function modelos_galeria( $attachments )
 {
   $fields = [
@@ -185,3 +170,14 @@ function modelos_galeria( $attachments )
 }
 
 add_action( 'attachments_register', 'modelos_galeria' );
+
+function wi_enqueue_scripts() {
+	// CSS
+
+	// JS
+	wp_enqueue_script( 'vanilla-masker-min', get_template_directory_uri() . '/assets/js/vendor/vanilla-masker.min.js', array(), '1.1.0', true );
+	wp_enqueue_script( 'splide-min', get_template_directory_uri() . '/assets/js/vendor/splide.min.js', array(), null, true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'wi_enqueue_scripts' );

@@ -17,7 +17,7 @@
         }
 
 		&::after {
-			content: 'FLOTAOEPT';
+			content: attr(data-title);
 			position: absolute;
 			z-index: -1;
 			top: 50%;
