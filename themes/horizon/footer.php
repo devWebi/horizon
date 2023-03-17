@@ -153,7 +153,7 @@
             <div class="container">
                 <div class="footer__copyright__copy d-flex justify-content-between align-items-center">
                     <p class="footer__copyright__item">Copyright &copy; <?php echo date( 'Y' ); ?> - Todos os Direitos Reservados</p>
-                    <p class="footer__copyright__item">Desenvolvido e otimizado por <a href=""
+                    <p class="footer__copyright__item">Desenvolvido e otimizado por <a href="https://webi.com.br/" target="_blank" rel="noopener"
                             class="footer__copyright__link">Agência WEBi</a></p>
                 </div>
             </div>
