@@ -112,7 +112,6 @@
 								<li class="header__menu__li d-block"><a href="<?php echo wp_dir(0);?>/quem-somos" class="header__menu__link">Horizon Boats</a>
 								</li>
 								<li class="header__menu__li d-block"><a href="<?php echo wp_dir(0);?>/projetos" class="header__menu__link">Projetos</a></li>
-								<li class="header__menu__li d-block"><a href="<?php echo wp_dir(0);?>/fale-conosco" class="header__menu__link">Contatos</a></li>
 								<li class="header__menu__li d-block"><a href="<?php echo wp_dir(0);?>/fale-conosco" class="header__menu__link header__menu__link--cta">Fale
 									conosco</a></li>
 							</ul>
@@ -150,9 +149,6 @@
 				</li>
 				<li class="mobile-menu__list__item">
 					<a href="<?php echo wp_dir(0);?>/projetos" class="mobile-menu__list__item__link">Projetos</a>
-				</li>
-				<li class="mobile-menu__list__item">
-					<a href="<?php echo wp_dir(0);?>/fale-conosco" class="mobile-menu__list__item__link">Contatos</a>
 				</li>
 			</ul>
 		</div>
