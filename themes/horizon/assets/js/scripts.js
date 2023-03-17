@@ -39,7 +39,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
 
 		telInputs && telInputs.forEach(telInput => {
-			console.log(telInputs);
 			telInput.addEventListener('input', inputHandler.bind(undefined, masks, 14), false);
 		});
 	}

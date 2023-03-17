@@ -183,5 +183,8 @@
 				<li class="mobile-menu__list__item">
 					<a href="<?php echo wp_dir(0);?>/projetos" class="mobile-menu__list__item__link">Projetos</a>
 				</li>
+				<li class="mobile-menu__list__item">
+					<a href="<?php echo wp_dir(0);?>/fale-conosco/" class="mobile-menu__list__item__link">Fale conosco</a>
+				</li>
 			</ul>
 		</div>

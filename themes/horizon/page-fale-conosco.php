@@ -11,14 +11,14 @@ get_template_part( 'template-parts/page', 'headline' );
 				<div class="contact__items">
 					<h2 class="contact__title">Fale conosco</h2>
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
-						<a href="#" class="contact__link d-inline-flex align-items-center justify-content-start flex-wrap gap-2">
-							<img src="<?php echo wp_dir(1);?>/assets/images/icon-whats.svg" alt="" class="contact__img">
+						<a href="#" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
+							<img src="<?php echo wp_dir(1); ?>/assets/images/icon-whats.svg" alt="" class="contact__img">
 							(21) 99125-2250
 						</a>
 					</div>
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
-						<a href="#" class="contact__link d-inline-flex align-items-center justify-content-start flex-wrap gap-2">
-							<img src="<?php echo wp_dir(1);?>/assets/images/icon-whats.svg" alt="" class="contact__img">
+						<a href="#" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
+							<img src="<?php echo wp_dir(1); ?>/assets/images/icon-whats.svg" alt="" class="contact__img">
 							(21) 97100-5212
 						</a>
 					</div>
@@ -28,7 +28,7 @@ get_template_part( 'template-parts/page', 'headline' );
 					if ( $email ):
 					?>
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
-						<a href="mailto:{email_aqui}" class="contact__link d-inline-flex align-items-center justify-content-start flex-wrap gap-2">
+						<a href="mailto:<?php echo $email; ?>" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
 							<img src="<?php echo wp_dir(1);?>/assets/images/icon-email.svg" alt="" class="contact__img">
 							atendimento@horizonboats.com.br
 						</a>
@@ -37,7 +37,7 @@ get_template_part( 'template-parts/page', 'headline' );
 					endif;
 					?>
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
-						<a href="https://goo.gl/maps/jCgJyrfsqBU42ksi6" target="_blank" class="contact__link contact__link--variable d-inline-flex align-items-center justify-content-start flex-wrap gap-2">
+						<a href="https://goo.gl/maps/jCgJyrfsqBU42ksi6" target="_blank" class="contact__link contact__link--variable d-inline-flex align-items-center justify-content-start gap-2">
 							<img src="<?php echo wp_dir(1);?>/assets/images/icon-localizacao.svg" alt="" class="contact__img">
 							Rua Delegado Waldir Guilherme nº 350, Ilha da Conceição, Niterói, Rio de Janeiro, Brasil.
 						</a>

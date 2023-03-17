@@ -34,8 +34,8 @@ function wp_dir($value){
 
 	if ( stripos( $_SERVER['HTTP_HOST'], '.test' ) > 0 ) {
 		$dir = array(
-			'http://horizon.test',
-			'http://horizon.test/wp-content/themes/horizon'
+			'https://horizon.test',
+			'https://horizon.test/wp-content/themes/horizon'
 		);
 	}
 
