@@ -121,29 +121,31 @@ get_header();
 
 
     <script>
-        const modelsCarousel = new Splide(document.querySelector('.models__carousel'), {
-			pagination: false,
-			rewind: true,
-			rewindByDrag: true,
-			updateOnMove: true
-		});
+		document.addEventListener('DOMContentLoaded', () => {
+			const modelsCarousel = new Splide(document.querySelector('.models__carousel'), {
+				pagination: false,
+				rewind: true,
+				rewindByDrag: true,
+				updateOnMove: true
+			});
 
-        const thumbnailsCarousel = new Splide(document.querySelector('.thumbnails__carousel'), {
-			perPage: 4,
-			pagination: false,
-			gap: 10,
-			arrows: false,
-			isNavigation: true,
-			breakpoints: {
-				576: {
-					perPage: 3.3
+			const thumbnailsCarousel = new Splide(document.querySelector('.thumbnails__carousel'), {
+				perPage: 4,
+				pagination: false,
+				gap: 10,
+				arrows: false,
+				isNavigation: true,
+				breakpoints: {
+					576: {
+						perPage: 3.3
+					}
 				}
-			}
-		});
+			});
 
-		modelsCarousel.sync(thumbnailsCarousel);
-		modelsCarousel.mount();
-		thumbnailsCarousel.mount();
+			modelsCarousel.sync(thumbnailsCarousel);
+			modelsCarousel.mount();
+			thumbnailsCarousel.mount();
+		});
     </script>
 
 	<script>
