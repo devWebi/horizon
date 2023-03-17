@@ -96,7 +96,7 @@ get_header();
         </div>
     </section>
 
-    <section class="history position-relative">
+    <!-- <section class="history position-relative">
         <div class="container">
             <div class="history__title m-5">
                 <p class="caption-headline text-center">conheça o</p>
@@ -177,7 +177,7 @@ get_header();
             </div>
 			<?php } ?>
         </div>
-    </section>
+    </section> -->
 
     <section class="boats">
         <div class="boats__title">

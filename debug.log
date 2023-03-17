@@ -67,3 +67,16 @@ Stack trace:
 [16-Mar-2023 17:25:44 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
 [16-Mar-2023 17:25:44 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 30
 [16-Mar-2023 17:25:44 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 30
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 30
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 30
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Undefined variable: x in C:\laragon\www\horizon\wp-content\themes\horizon\index.php on line 161
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 30
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 30
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Trying to access array offset on value of type bool in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 30
+[16-Mar-2023 17:36:40 UTC] PHP Notice:  Undefined offset: 1 in C:\laragon\www\horizon\wp-content\themes\horizon\class\Classe.php on line 32
