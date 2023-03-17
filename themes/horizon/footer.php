@@ -100,14 +100,14 @@
                     <div class="footer__items d-flex flex-column text-center text-sm-start">
                         <h3 class="footer__items__title">Contatos</h3>
 						
-						<a href="<?php echo wp_dir(0);?>/fale-conosco" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">Fale conosco</a>
+						<a href="<?php echo wp_dir(0);?>/fale-conosco" class="footer__items__link d-flex justify-content-center justify-content-sm-start align-items-center gap-2">Fale conosco</a>
 						
 						<?php
 							$whatsapp = get_theme_mod( 'whatsapp' );
 							if ( $whatsapp ){
 								$whatsapp_formatted = preg_replace( '/^([0-9]{2})([0-9]{4,5})([0-9]{4})$/', '($1) $2-$3', $whatsapp );
 							?>
-                        <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsapp; ?>&text=<?php echo urlencode( 'Olá, vim pelo site e gostaria de mais informações' ); ?>" target="_blank" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center gap-2">
+                        <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsapp; ?>&text=<?php echo urlencode( 'Olá, vim pelo site e gostaria de mais informações' ); ?>" target="_blank" class="footer__items__link d-flex justify-content-center justify-content-sm-start align-items-center gap-2">
                             <svg width="26" height="26" class="footer__items__link__icon" viewBox="0 0 26 26" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -122,7 +122,7 @@
 						$email = get_theme_mod( 'email' );
 						if ( $email ):
 						?>
-                        <a href="mailto:<?php echo $email; ?>" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center  gap-2">
+                        <a href="mailto:<?php echo $email; ?>" class="footer__items__link d-flex justify-content-center justify-content-sm-start align-items-center  gap-2">
                             <svg width="26" height="20" class="footer__items__link__icon" viewBox="0 0 26 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -135,7 +135,7 @@
 						endif;
 						?>
                         <address>
-                            <a href="https://goo.gl/maps/jCgJyrfsqBU42ksi6" target="_blank" class="footer__items__link d-flex flex-wrap justify-content-center justify-content-sm-start align-items-center  gap-2">
+                            <a href="https://goo.gl/maps/jCgJyrfsqBU42ksi6" target="_blank" class="footer__items__link d-flex justify-content-center justify-content-sm-start align-items-center  gap-2">
                                 <svg width="22" height="26" class="footer__items__link__icon" viewBox="0 0 22 26" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path

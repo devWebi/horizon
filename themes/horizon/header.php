@@ -65,7 +65,7 @@
 
 							if ( $facebook ):
 							?>
-							<a href="<?php echo $facebook; ?>" class="header__small__socials__item d-flex justify-content-center align-items-center">
+							<a href="<?php echo $facebook; ?>" target="_blank" class="header__small__socials__item d-flex justify-content-center align-items-center">
 								<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
@@ -82,7 +82,7 @@
 
 							if ( $instagram ):
 							?>
-							<a href="<?php echo $instagram; ?>" class="header__small__socials__item d-flex justify-content-center align-items-center">
+							<a href="<?php echo $instagram; ?>" target="_blank" class="header__small__socials__item d-flex justify-content-center align-items-center">
 								<svg width="14" height="14" viewBox="0 0 19 19" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
@@ -99,7 +99,7 @@
 
 							if ( $linkedin ):
 							?>
-							<a href="<?php echo get_theme_mod( 'linkedin' ); ?>" class="header__small__socials__item d-flex justify-content-center align-items-center">
+							<a href="<?php echo get_theme_mod( 'linkedin' ); ?>" target="_blank" class="header__small__socials__item d-flex justify-content-center align-items-center">
 								<svg width="14" height="14" viewBox="0 0 20 20" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
@@ -119,7 +119,7 @@
 
 							if ( $youtube ):
 							?>
-							<a href="<?php echo get_theme_mod( 'youtube' ); ?>" class="header__small__socials__item d-flex justify-content-center align-items-center">
+							<a href="<?php echo get_theme_mod( 'youtube' ); ?>" target="_blank" class="header__small__socials__item d-flex justify-content-center align-items-center">
 								<svg width="17" height="14" viewBox="0 0 17 14" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
