@@ -277,8 +277,8 @@ get_header();
                                     <img src="<?php echo wp_dir(1);?>/assets/images/icon-testimonials.png" alt=""
                                         class="testimonials__card__icon position-absolute">
                                     <div class="testimonials__card__profile d-flex justify-content-center align-items-center">
-                                        <img src="<?php echo wp_dir(1) ."/57/0/fill/".$linha->img;?>" alt="<?php echo $linha->dados->post_title;?>"
-                                            class="testimonials__card__photo m-2">
+                                        <img src="<?php echo wp_dir(1); ?>/assets/images/depoimentos.webp" alt="<?php echo $linha->dados->post_title;?>"
+                                            class="testimonials__card__photo m-2 position-relative">
                                         <div class="testimonials__card__info">
                                             <h4 class="testimonials__card__name"><?php echo $linha->dados->post_title;?></h4>
                                             <p class="testimonials__card__work"><?php echo get_post_meta( $linha->dados->ID, 'cargo-depoimentos', true );?></p>
