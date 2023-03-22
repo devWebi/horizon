@@ -92,7 +92,7 @@
                         <h3 class="footer__items__title">Institucional</h3>
                         <a href="<?php echo wp_dir(0);?>/quem-somos" class="footer__items__link">Quem Somos</a>
                         <a href="<?php echo wp_dir(0);?>/nossos-modelos" class="footer__items__link">Nossos Modelos</a>
-                        <a href="<?php echo wp_dir(0);?>/historico-de-construcao" class="footer__items__link">Histórico de Construção</a>
+                        <!-- <a href="<?php echo wp_dir(0);?>/historico-de-construcao" class="footer__items__link">Histórico de Construção</a> -->
                         <a href="<?php echo wp_dir(0); ?>/politica-de-privacidade" class="footer__items__link">Política de Privacidade</a>
                     </div>
                 </div>

@@ -30,7 +30,7 @@ get_template_part( 'template-parts/page', 'headline' );
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
 						<a href="mailto:<?php echo $email; ?>" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
 							<img src="<?php echo wp_dir(1);?>/assets/images/icon-email.svg" alt="" class="contact__img">
-							atendimento@horizonboats.com.br
+							<?php echo $email; ?>
 						</a>
 					</div>
 					<?php
