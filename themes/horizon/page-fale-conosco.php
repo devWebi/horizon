@@ -11,13 +11,13 @@ get_template_part( 'template-parts/page', 'headline' );
 				<div class="contact__items">
 					<h2 class="contact__title">Fale conosco</h2>
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
-						<a href="#" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
+						<a href="https://api.whatsapp.com/send?phone=21991252250&text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es" target="_blank" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
 							<img src="<?php echo wp_dir(1); ?>/assets/images/icon-whats.svg" alt="" class="contact__img">
 							(21) 99125-2250
 						</a>
 					</div>
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
-						<a href="#" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
+						<a href="https://api.whatsapp.com/send?phone=21971005212&text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es" target="_blank" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
 							<img src="<?php echo wp_dir(1); ?>/assets/images/icon-whats.svg" alt="" class="contact__img">
 							(21) 97100-5212
 						</a>
@@ -28,7 +28,7 @@ get_template_part( 'template-parts/page', 'headline' );
 					if ( $email ):
 					?>
 					<div class="contact__card d-flex flex-column align-items-center justify-content-center">
-						<a href="mailto:<?php echo $email; ?>" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
+						<a href="mailto:<?php echo $email; ?>" target="_blank" class="contact__link d-inline-flex align-items-center justify-content-start gap-2">
 							<img src="<?php echo wp_dir(1);?>/assets/images/icon-email.svg" alt="" class="contact__img">
 							<?php echo $email; ?>
 						</a>
