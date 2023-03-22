@@ -770,7 +770,9 @@ button{background:0;outline:0;border:0;cursor:pointer}
 .wpcf7-form::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.8);z-index:1;pointer-events:none;opacity:0;-webkit-transition:all .3s;transition:all .3s}
 .wpcf7-form.submitting::after{opacity:1;pointer-events:all}
 .wpcf7-not-valid-tip{padding:10px;color:#ff4858;background:#ffe0e3;border:0}
+.wpcf7 form.invalid .wpcf7-response-output{padding:10px;color:#ff4858;background:#ffe0e3;border:0;margin:0 0 20px}
 .wpcf7 form.invalid .wpcf7-response-output,.wpcf7 form.unaccepted .wpcf7-response-output,.wpcf7 form.payment-required .wpcf7-response-output{padding:10px;color:#ce8501;background:#ffdb9b;border:0;margin:0 0 20px}
+.wpcf7 form.sent .wpcf7-response-output{padding:10px;color:#24ad5d;background:#c3f3d7;border:0;margin:0 0 20px}
 .wpcf7-spinner{display:none}
 @media(min-width:576px){.container,.container-sm{max-width:540px}
 .col-sm{-webkit-box-flex:1;-ms-flex:1 0 0;flex:1 0 0}

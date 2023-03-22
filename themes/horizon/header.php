@@ -31,7 +31,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo wp_dir(1);?>/assets/images/favicon-32x32.png">
 
     <link rel="stylesheet" href="<?php echo wp_dir(1);?>/assets/css/splide-core.min.css">
-	<link rel="stylesheet" href="<?php echo wp_dir(1);?>/assets/css/style.css">
+	<link rel="stylesheet" href="<?php echo wp_dir(1);?>/assets/css/style.css?ver=1.0.1">
 </head>
 	<body <?php body_class(); ?>>
 		<header class="header">
