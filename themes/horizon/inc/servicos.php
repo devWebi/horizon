@@ -46,13 +46,7 @@ add_action('init', 'create_servicos');
 			
 			5 => array("type" => "text", "name" => "servico-card2", "placeholder" => "", "value" => "", "titulo" => "Titulo"),
 			6 => array("type" => "textarea", "name" => "servico-previa-card2", "placeholder" => "", "value" => "", "titulo" => "Prévia de chamada"),
-			7 => array("type" => "text", "name" => "servico-link-card2", "placeholder" => "Ex: https://google.com.br", "value" => "", "titulo" => "Adicionar URL do link"),
-			
-			8 => ["type" => "linha", "titulo" => "Card 03"],
-			
-			9 => array("type" => "text", "name" => "servico-card3", "placeholder" => "", "value" => "", "titulo" => "Titulo"),
-			10 => array("type" => "textarea", "name" => "servico-previa-card3", "placeholder" => "", "value" => "", "titulo" => "Prévia de chamada"),
-			11 => array("type" => "text", "name" => "servico-link-card3", "placeholder" => "Ex: https://google.com.br", "value" => "", "titulo" => "Adicionar URL do link")
+			7 => array("type" => "text", "name" => "servico-link-card2", "placeholder" => "Ex: https://google.com.br", "value" => "", "titulo" => "Adicionar URL do link")
 		]
 	);
 ?>
