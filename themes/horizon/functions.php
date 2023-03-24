@@ -55,13 +55,13 @@ add_action('template_redirect', 'disableAuthorUrl');
 remove_action('wp_head', 'wp_generator');
 
 function wi_after_setup_theme() {
-	if ( class_exists( 'ACF' ) ) {
-		acf_add_options_page( array(
-			'page_title'	=>	'Configurações do Tema',
-			'icon_url'		=>	'dashicons-layout',
-			'position'		=>	50
-		) );
-	}
+	// if ( class_exists( 'ACF' ) ) {
+	// 	acf_add_options_page( array(
+	// 		'page_title'	=>	'Configurações do Tema',
+	// 		'icon_url'		=>	'dashicons-layout',
+	// 		'position'		=>	50
+	// 	) );
+	// }
 }
 
 add_action( 'after_setup_theme', 'wi_after_setup_theme' );
