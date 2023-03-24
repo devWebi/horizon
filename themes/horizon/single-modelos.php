@@ -72,8 +72,23 @@ get_header();
 			<div class="features__tabs">
 				<div class="features__tabs__header d-flex">
 					<div class="features__tabs__header__item features__tabs__header__item--active d-flex justify-content-center align-items-center">Descrição</div>
+					<?php
+					$specifications = get_post_meta( $linha->dados->ID, 'modelo-especificacao', true );
+
+					if ( ! empty( $specifications ) ):
+					?>
 					<div class="features__tabs__header__item d-flex justify-content-center align-items-center">Especificações</div>
+					<?php
+					endif;
+					?>
+					<?php
+					$equipment = get_post_meta( $linha->dados->ID, 'modelo-equipamentos', true );
+					if ( ! empty( $equipment ) ):
+					?>
 					<div class="features__tabs__header__item d-flex justify-content-center align-items-center">Equipamentos</div>
+					<?php
+					endif;
+					?>
 				</div>
 
 				<div class="features__tabs__content">
@@ -81,13 +96,25 @@ get_header();
 						<?php echo wpautop($linha->dados->post_content);?>
 					</div>
 
+					<?php
+					if ( ! empty( $specifications ) ):
+					?>
 					<div class="features__tabs__content__item">
 						<?php echo wpautop(get_post_meta( $linha->dados->ID, 'modelo-especificacao', true ));?>
 					</div>
+					<?php
+					endif;
+					?>
 
+					<?php
+					if ( ! empty( $equipment ) ):
+					?>
 					<div class="features__tabs__content__item">
 						<?php echo wpautop(get_post_meta( $linha->dados->ID, 'modelo-equipamentos', true ));?>
 					</div>
+					<?php
+					endif;
+					?>
 				</div>
 			</div>
         </div>
