@@ -8,7 +8,7 @@ require_once('class/CustomFields.php');
 $site = new Classe();
 
 require_once('inc/banners.php');
-require_once('inc/construcao.php');
+// require_once('inc/construcao.php');
 require_once('inc/servicos.php');
 require_once('inc/depoimentos.php');
 require_once('inc/modelos.php');
